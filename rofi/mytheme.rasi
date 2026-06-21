@@ -1,50 +1,82 @@
 * {
-  background-color: #292d3e;
-  border-color: #434758;
-  text-color: #d0d0d0;
-  spacing: 0;
-  width: 768px;
-  height: 512px;
+    background-color:     #0d0018;
+    text-color:           #DDA0FF;
+    border-color:         #9B30FF;
+    spacing:              0;
+    highlight:            #FF6600;
 }
 
 window {
-  border: 2px;
-  border-color: #c792ea;
+    width:                600px;
+    border:               2px;
+    border-color:         #9B30FF;
+    border-radius:        8px;
+    background-color:     #0d0018;
+}
+
+mainbox {
+    spacing:              0;
+    children:             [inputbar, listview];
 }
 
 inputbar {
-  border: 0 0 1px 0;
-  children: [prompt,entry];
+    background-color:     #1a0030;
+    spacing:              8px;
+    padding:              12px;
+    border-radius:        8px 8px 0 0;
+    children:             [prompt, entry];
 }
 
 prompt {
-  padding: 16px;
-  border: 0 1px 0 0;
-}
-
-textbox {
-  background-color: #292d3e;
-  border: 0 0 1px 0;
-  border-color: #c792ea;
-  padding: 8px 16px;
+    text-color:           #FF00FF;
+    padding:              0 4px;
 }
 
 entry {
-  padding: 16px;
+    placeholder:          "Search";
+    placeholder-color:    #4a0080;
+    text-color:           #FFFFFF;
+    padding:              0;
 }
 
 listview {
-  cycle: false;
-  margin: 0 0 -1px 0;
-  scrollbar: true;
+    spacing:              0;
+    padding:              4px 0;
+    scrollbar:            true;
+    scrollbar-width:      4px;
+}
+
+scrollbar {
+    handle-color:         #9B30FF;
+    background-color:     #1a0030;
 }
 
 element {
-  border: 0 0 1px 0;
-  padding: 16px;
+    padding:              8px 12px;
+    background-color:     transparent;
+    text-color:           #DDA0FF;
+    spacing:              8px;
+    border-radius:        4px;
+    margin:               2px 6px;
 }
 
 element selected {
-  background-color: #2e343f;
+    background-color:     #8B00FF;
+    text-color:           #FFFFFF;
 }
 
+element-icon {
+    size:                 24px;
+}
+
+element-text {
+    text-color:           inherit;
+}
+
+element selected element-text {
+    text-color:           #FFFFFF;
+}
+
+element alternate {
+    background-color:     transparent;
+}
